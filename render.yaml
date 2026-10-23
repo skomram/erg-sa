@@ -1,0 +1,24 @@
+# Darmowy test Ergonode Apps - stan aplikacji w SQLite jest nietrwaly na Render Free.
+# UWAGA: po 15 min bezczynnosci serwis zasypia i traci instalacje, mapowania oraz konfiguracje.
+services:
+  - type: web
+    name: sellasist-ergonode-test
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    autoDeployTrigger: off
+    envVars:
+      - key: ENCRYPTION_KEY
+        generateValue: true
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: ERGONODE_ALLOWED_HOSTS
+        sync: false
+      - key: DB_PATH
+        value: /data/app.sqlite3
+      - key: ENABLE_LIVE_WRITES
+        value: "false"
+      - key: ENABLE_ERGONODE_IMPORTS
+        value: "false"
