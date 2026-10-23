@@ -4,6 +4,14 @@ Aplikacja typu **Ergonode Apps2** do integracji produktów, atrybutów i zdjęć
 
 **[Instrukcja rejestracji w Ergonode](docs/INSTALACJA_ERGONODE.md)** - sam adres pliku manifestu z GitHuba nie wystarczy: wymagany jest uruchomiony backend HTTPS. W Ergonode wklej adres `https://TWOJ-HOST/manifest.json` po wdrożeniu aplikacji.
 
+## Szybkie uruchomienie testowe na Render (bezpłatnie)
+
+[![Wdróż na Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/skomram/erg-sa)
+
+Pełna instrukcja: [docs/RENDER_FREE.md](docs/RENDER_FREE.md).
+
+**Uwaga:** Render Free usypia serwer po 15 minutach bezczynności, a jego system plików jest nietrwały. Obecna aplikacja korzysta z SQLite i **traci konfigurację instalacji oraz mapowania po każdym uśpieniu lub restarcie**. Darmowy wariant Render nadaje się wyłącznie do krótkiego testu endpointów i rejestracji, nie do trwałej synchronizacji. Działający URL dla Ergonode to `https://TWOJ-SERWER.onrender.com/manifest.json`, nigdy `raw.githubusercontent.com`.
+
 ## Status realizacji - ważne
 
 | Zakres | Status |
