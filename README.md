@@ -2,6 +2,8 @@
 
 Aplikacja typu **Ergonode Apps2** do integracji produktów, atrybutów i zdjęć z Sellasist. Kod źródłowy aplikacji uruchamiany na osobnym serwerze. **GitHub sam w sobie nie hostuje aplikacji** - wymagana jest publiczna usługa HTTPS.
 
+**[Instrukcja rejestracji w Ergonode](docs/INSTALACJA_ERGONODE.md)** - sam adres pliku manifestu z GitHuba nie wystarczy: wymagany jest uruchomiony backend HTTPS. W Ergonode wklej adres `https://TWOJ-HOST/manifest.json` po wdrożeniu aplikacji.
+
 ## Status realizacji - ważne
 
 | Zakres | Status |
